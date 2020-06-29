@@ -1,1 +1,234 @@
+def change(inp):
+    return inp+7
+    
+def intro(inp):
+    output = "Hello, my name is " + inp + " and I love SI 106."
+    return output
+    
+def intro(inp):
+    output = "Hello, my name is {} and I love SI 106.".format(inp)
+    return output
+    
+def intro(inp):
+    
+    return "Hello, my name is {} and I love SI 106.".format(inp)
+    
+def s_change(inp):
+    return inp + " for fun."
+
+def decision(inp):
+    if len(inp) > 17:
+        return "This is a long string"
+    else:
+        return "This is a short string"
+
+def total(list_of_integers):
+    tot = 0
+    for integer in list_of_integers:
+        tot += integer
+    return tot
+
+def count(numbers):
+    tot=0
+    for numb in numbers:
+        tot+=1
+    return tot
+
+
+def addit(number):
+    return number + 5    
+def mult(number):
+    return number*addit
+
+
+def accum(numbers):
+    total = 0
+    for number in numbers:
+        total += number
+    return total
+
+
+count=0
+def length(lst):
+    count = 0
+    for items in lst:
+        count+=1
+    if count >= 5:
+        return "Longer than 5"
+    else:
+        return "Less than 5"
+
+
+
+lst_tups = [('Articuno', 'Moltres', 'Zaptos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", "Tauros", 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Unown', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Wailord', 'Seviper', 'Sealeo')]
+t_check=[]
+for group in lst_tups:
+    t_check.append(group[2])
+
+
+
+tups = [('a', 'b', 'c'), (8, 7, 6, 5), ('blue', 'green', 'yellow', 'orange', 'red'), (5.6, 9.99, 2.5, 8.2), ('squirrel', 'chipmunk')]
+seconds=[]
+for group in tups:
+    seconds.append(group[1])
+
+
+p_names=[]
+p_number=[]
+pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
+for creature, number in pokemon.items():
+    p_names.append(creature)
+    p_number.append(number)
+
+
+track_events=[]
+track_medal_counts = {'shot put': 1, 'long jump': 3, '100 meters': 2, '400 meters': 2, '100 meter hurdles': 3, 'triple jump': 3, 'steeplechase': 2, '1500 meters': 1, '5K': 0, '10K': 0, 'marathon': 0, '200 meters': 0, '400 meter hurdles': 0, 'high jump': 1}
+for event, medals in track_medal_counts.items():
+    track_events.append(event)
+
+
+country=[]
+tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
+for group in tuples_lst:
+    country.append(group[1])
+
+
+num_medals=[]
+gold = {'USA':31, 'Great Britain':19, 'China':19, 'Germany':13, 'Russia':12, 'Japan':10, 'France':8, 'Italy':8}
+for country, count in gold.items():
+    num_medals.append(count)
+
+
+mean_SP=0
+max_interest=0
+data_lst=[]
+total=0
+with open("SP500.txt","r") as data:
+    for lines in data.readlines():
+        data_lst.append(lines.split(","))
+    print(data_lst)
+    print(data_lst[0])
+    print(data.read())
+    for date, sp500, divident, earnings, CPI, LIR, RP, RD, RE, PE10 in data_lst[6:18]:
+        total+=float(sp500)
+        mean_SP=total/12
+        newLIR=float(LIR)
+        if newLIR > max_interest:
+            max_interest = newLIR
+            
+            
+count = 0
+eve_nums=[]
+while count <=15:
+    if count%2==0:
+        eve_nums.append(count)
+    count+=1
+
+
+stop = len(list1)
+count=0
+accum=0
+while count < stop:
+    accum+=list1[count]
+    count+=1
+    
+
+
+list_of_numbers=(1, 2, 3, 4)
+def stop_at_four(lst):
+    new_list=[]
+    count=0
+    while count < len(lst) and lst[count] !=4:
+        new_list.append(lst[count])
+        count+=1
+    return new_list
+print(stop_at_four(list_of_numbers))
+
+
+def sublist(lst):
+    count = 0
+    new_sublst=[]
+    while count < len(lst) and lst[count] != 5:
+        new_sublst.append(lst[count])
+        count+=1
+    return new_sublst
+
+
+def check_nums(lst):
+    count=0
+    new_lst=[]
+    while count < len(lst) and lst[count] != 7:
+        new_lst.append(lst[count])
+        count+=1
+    return new_lst
+
+
+def sublist(lst):
+    count = 0
+    new_lst=[]
+    while count < len(lst) and lst[count] != "STOP":
+        new_lst.append(lst[count])
+        count+=1
+    return new_lst
+
+
+
+def stop_at_z(lst):
+    count = 0
+    new_lst=[]
+    while count < len(lst) and lst[count] != "z":
+        new_lst.append(lst[count])
+        count+=1
+    return new_lst
+
+
+
+sum1 = 0
+
+lst = [65, 78, 21, 33]
+
+for x in lst:
+    sum1 = sum1 + x
+
+count = 0
+sum2=0
+while count < len(lst):
+    sum2+=lst[count]
+    count+=1
+    
+
+def beginning(lst):
+    count = 0
+    new_lst=[]
+    while count < 10 and lst[count] != "bye":
+        new_lst.append(lst[count])
+        count+=1
+    return new_lst
+
+
+def str_mult(req_str, opt_int=3):
+    return req_str*opt_int
+
+
+def test(x, y=True, dict1={2:3, 4:5, 6:8}):
+    if y == True and x in dict1:
+        return dict1[x]
+    else:
+        return False
+
+
+def checkingIfIn(req_str, direction=True, d={'apple':2, 'pear':1, 'fruit':19, 'orange':5, 'banana':3, 'grapes':2, 'watermelon':7}):
+    while direction == True:
+        if req_str in d:
+            return True
+        else:
+            return False
+        break
+    while direction == False:
+        if req_str in d:
+            return False
+        else:
+            return True
+        break
+
 
